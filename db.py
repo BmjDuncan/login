@@ -71,5 +71,3 @@ def insert_user(cnx,cursor,username,key):
     cursor.close()
     cnx.close()
 
-if __name__ == '__main__':
-    app.run(host='0.0.0.0',port="3306")
