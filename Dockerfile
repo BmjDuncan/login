@@ -6,3 +6,4 @@ WORKDIR /home
 RUN pip install -r requirements.txt
 ENTRYPOINT ["python"]
 CMD ["db.py"]
+EXPOSE 3306
