@@ -12,7 +12,11 @@ TABLES['key'] = (
     "  PRIMARY KEY (ID)"
     ") ENGINE=InnoDB")
 
-mydb = mysql.connector.execute("CREATE USER 'host'@'34.79.241.61' IDENTIFIED BY 'goose'")
+mydb = mysql.connector.connect(
+  host="34.79.241.61",
+  user="root",
+  password="goose"
+)
 
 mycursor = mydb.cursor()
 
@@ -66,4 +70,3 @@ def insert_user(cnx,cursor,username,key):
     cnx.commit()
     cursor.close()
     cnx.close()
-
