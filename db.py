@@ -12,7 +12,7 @@ TABLES['key'] = (
     "  PRIMARY KEY (ID)"
     ") ENGINE=InnoDB")
 
-mydb = mysql.connector.connect("CREATE USER 'host'@'34.79.241.61' IDENTIFIED BY 'goose'")
+mydb = mysql.connector.execute("CREATE USER 'host'@'34.79.241.61' IDENTIFIED BY 'goose'")
 
 mycursor = mydb.cursor()
 
