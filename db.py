@@ -12,15 +12,11 @@ TABLES['key'] = (
     "  PRIMARY KEY (ID)"
     ") ENGINE=InnoDB")
 
-mydb = mysql.connector.connect(
-  host="34.77.94.242",
-  user="root",
-  password="goose"
-)
+mydb = mysql.connector.connect("CREATE USER 'host'@'34.79.241.61' IDENTIFIED BY 'goose'")
 
 mycursor = mydb.cursor()
 
-mycursor.execute("GRANT ALL PRIVILEGES ON AccessKeys.* To 'root'@'34.77.94.242' IDENTIFIED BY 'goose'")
+mycursor.execute("GRANT ALL PRIVILEGES ON AccessKeys.* To 'root'@'34.79.241.61' IDENTIFIED BY 'goose'")
 
 
 def create_database(cnx,cursor):
