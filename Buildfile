@@ -1,2 +1,2 @@
-docker image build -t login .
-docker run -p 3306:3306 --name login -t -d login 
+docker pull mongo
+docker run -d -e MONGO_INITDB_ROOT_USERNAME='admin' -e MONGO_INITDB_ROOT_PASSWORD='goose' --name mongo -p 27017:27017 mongo --config mongodb.conf
